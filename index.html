@@ -10,8 +10,12 @@
 </head>
 <body>
     <div class = 'header'>
-        <p class= 'head_text'>Libary</p>
+        <p class= 'head_text'>Libary -
+            For Odin Project
+        </p>
+
     </div>
+    <div class ='container'>
         <form name='bookForm' id='bookForm'>
             <label for='Bname'>Book name</label>
             <input type='text' id='Bname' name='Bname'>
@@ -24,7 +28,9 @@
               <option value="Read">Read</option>
               <option value="notRead">Not Read</option>
             </select>  
-            <button onclick="GetForm();">Add Book</button>
+        </br>
+        </br>
+            <button onclick="GetForm();" id='add_btn' class='add_btn'>Add Book</button>
         </form>
         <table id='Book_list'>
             <tr>

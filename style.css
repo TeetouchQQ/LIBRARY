@@ -1,9 +1,62 @@
-.table{
-    width:100%;
+#Book_list{
+    width:90%;
     border-collapse: collapse;
     border: 1px solid black;
 }
 .head_text{
     font-size: 50px;
+    border-bottom: solid;
+
+}
+
+#Book_list td,#Book_list th{
+    border:  1px solid #dddd;
+    padding: 10px;
+    text-align: center;
+}
+#Book_list th{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(31, 155, 31);
+    color:white;
+    
+
+}
+#container{
+    max-width: 100px;
+    align-items: center;
+    }
+#del_btn{
+    width: 100%;
+    background-color: rgb(184, 41, 6);
+    padding:10px;
+    color: white;
+    border: none;
+    display: inline-block;
+}
+#btn{
+    width: 100%;
+    background-color: rgb(111, 49, 226);
+    padding:10px;
+    color: white;
+    border:none;
+    display: inline-block;
+}
+input[type=text]{
+    padding:5px;
+    margin-right: 10px;
+    font-size: 15px;
+
+}
+.add_btn{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 39px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
 
 }

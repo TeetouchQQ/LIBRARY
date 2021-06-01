@@ -13,6 +13,8 @@ function Addbook(Name,Author,Page,status,key){
 
     var btn = document.createElement("BUTTON");
     btn.innerHTML = status;
+    btn.className = 'btn';
+    btn.id = 'btn'
     btn.addEventListener("click",function(){
         const Book = {
             name:Name,
@@ -37,6 +39,8 @@ function Addbook(Name,Author,Page,status,key){
 
     var del_btn = document.createElement("BUTTON");
     del_btn.innerHTML = 'DELETE';
+    del_btn.className = 'del_btn';
+    del_btn.id = 'del_btn';
     del_btn.addEventListener('click',function(){
         localStorage.removeItem(key);
         location.reload();
