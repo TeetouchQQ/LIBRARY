@@ -1,0 +1,9 @@
+.table{
+    width:100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.head_text{
+    font-size: 50px;
+
+}

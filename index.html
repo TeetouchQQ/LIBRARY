@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href="style.css">
+    <script src='script.js' defer></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libary</title>
+</head>
+<body>
+    <div class = 'header'>
+        <p class= 'head_text'>Libary</p>
+    </div>
+        <form name='bookForm' id='bookForm'>
+            <label for='Bname'>Book name</label>
+            <input type='text' id='Bname' name='Bname'>
+            <label for='Author'>Author</label>
+            <input type='text' id='Author' name='Author'>
+            <label for='Page'>Page</label>
+            <input type='text' id='Page' name='Page'>
+            <label for="Read">Status:</label>
+            <select id="Read" name="ReadList">
+              <option value="Read">Read</option>
+              <option value="notRead">Not Read</option>
+            </select>  
+            <button onclick="GetForm();">Try it</button>
+        </form>
+        <table id='Book_list'>
+            <tr>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Page</th>
+                <th>Read</th>
+                <th>Option</th>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
