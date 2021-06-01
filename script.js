@@ -1,5 +1,5 @@
 
-function Addbook(Name,Author,Page,status){
+function Addbook(Name,Author,Page,status,key){
     var table = document.getElementById('Book_list');
 
     var row = table.insertRow(-1);
@@ -9,13 +9,44 @@ function Addbook(Name,Author,Page,status){
     var cell_Page = row.insertCell(2);
     var cell_Status = row.insertCell(3);
     var cell_option = row.insertCell(4);
-    
+
+
+    var btn = document.createElement("BUTTON");
+    btn.innerHTML = status;
+    btn.addEventListener("click",function(){
+        const Book = {
+            name:Name,
+            Author:Author,
+            Page:Page,
+            status:'not Read'
+        }
+        if(btn.innerHTML == 'Read'){
+            Book.status = 'not Read'
+            btn.innerHTML = 'not Read'
+            localStorage.setItem(key,JSON.stringify(Book));
+  
+            
+        }else{
+            Book.status = 'Read'
+            btn.innerHTML = 'Read'
+            localStorage.setItem(key,JSON.stringify(Book));
+            
+        }
+    })
+
+
+    var del_btn = document.createElement("BUTTON");
+    del_btn.innerHTML = 'DELETE';
+    del_btn.addEventListener('click',function(){
+        localStorage.removeItem(key);
+        location.reload();
+    })
 
     cell_Name.innerHTML = Name;
     cell_Author.innerHTML = Author;
     cell_Page.innerHTML = Page;
-    cell_Status.innerHTML = status;
-    cell_option.innerHTML = 'DELETE';
+    cell_Status.appendChild(btn);
+    cell_option.appendChild(del_btn);
 }
 
 function GetForm(){
@@ -57,7 +88,8 @@ function showBook(){
         Addbook(Book_obj['name'],
         Book_obj['Author'],
         Book_obj['Page'],
-        Book_obj['status'])
+        Book_obj['status'],
+        key)
     }
 
 }
